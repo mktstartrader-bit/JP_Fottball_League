@@ -518,6 +518,77 @@
   .container-x { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
   @media (min-width: 768px) { .container-x { padding: 0 48px; } }
 
+  /* Stage block (① 試合前 / ② 試合後) */
+  .stage-block { width: 100%; }
+  .stage-head {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 20px 24px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(0, 71, 187, 0.06), rgba(22, 233, 215, 0.08));
+    border: 1px solid rgba(0, 71, 187, 0.12);
+    color: var(--st-dark, #0D0D4B);
+  }
+  @media (min-width: 768px) {
+    .stage-head { padding: 24px 32px; gap: 22px; }
+  }
+  .stage-head-dark {
+    background: linear-gradient(135deg, rgba(13, 13, 75, 0.92), rgba(0, 71, 187, 0.88));
+    border-color: rgba(22, 233, 215, 0.35);
+    color: #fff;
+    box-shadow: 0 18px 40px -22px rgba(0, 71, 187, 0.55);
+  }
+  .stage-num {
+    flex: 0 0 auto;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 800;
+    background: #fff;
+    color: var(--st-blue, #0047BB);
+    box-shadow: 0 6px 18px -10px rgba(0, 71, 187, 0.6);
+  }
+  @media (min-width: 768px) {
+    .stage-num { width: 60px; height: 60px; font-size: 28px; }
+  }
+  .stage-head-dark .stage-num {
+    background: var(--st-cyan, #16E9D7);
+    color: var(--st-dark, #0D0D4B);
+  }
+  .stage-titles { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+  .stage-title {
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+  @media (min-width: 768px) {
+    .stage-title { font-size: 28px; }
+  }
+  .stage-sub {
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0.85;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  @media (min-width: 768px) {
+    .stage-sub { font-size: 16px; }
+  }
+  .stage-gift {
+    font-size: 18px;
+    line-height: 1;
+  }
+  @media (min-width: 768px) {
+    .stage-gift { font-size: 22px; }
+  }
+
   /* Step cards */
   .step-card {
     background: #fff;
@@ -740,6 +811,22 @@
     overflow: hidden;
     transition: all 0.4s cubic-bezier(.2,.7,.2,1);
     text-align: center;
+  }
+  .reward-card .reward-emoji {
+    font-size: clamp(48px, 5vw, 64px);
+    line-height: 1;
+    margin: 0 auto;
+  }
+
+  /* Info block emojis (準備を整えましょう / 注意事項) */
+  .info-emoji {
+    font-size: 24px;
+    line-height: 1;
+  }
+  .info-bolt {
+    font-size: 16px;
+    line-height: 1.4;
+    flex-shrink: 0;
   }
   .reward-card .label-en {
     letter-spacing: 0.3em;
